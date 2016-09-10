@@ -26,7 +26,7 @@ import com.semanticcms.core.model.Element;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableDateTime;
 
-public class News extends Element {
+public class News extends Element implements Comparable<News> {
 
 	// Target of news entry, will be the parent page/element of the news entry when not specified
 	private String book;
@@ -41,6 +41,15 @@ public class News extends Element {
 	// guid: generated from target
 	// Java 1.8: No longer use joda time
 	private DateTime pubDate; // Required, maybe a future version could interact with versioning systems
+
+	@Override
+	public int compareTo(News o) {
+		// Sort by pubDate descending
+		int diff = pubDate.compareTo(o.pubDate);
+		if(diff != 0) return diff;
+		// Then sort by page
+		return getPage().compareTo(o.getPage());
+	}
 
 	@Override
 	public News freeze() {

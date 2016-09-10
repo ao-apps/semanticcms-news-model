@@ -42,12 +42,13 @@ public class News extends Element implements Comparable<News> {
 	// Java 1.8: No longer use joda time
 	private DateTime pubDate; // Required, maybe a future version could interact with versioning systems
 
+	/**
+	 * Ordered by pubDate desc, page
+	 */
 	@Override
 	public int compareTo(News o) {
-		// Sort by pubDate descending
 		int diff = pubDate.compareTo(o.pubDate);
 		if(diff != 0) return diff;
-		// Then sort by page
 		return getPage().compareTo(o.getPage());
 	}
 

@@ -47,7 +47,7 @@ public class News extends Element implements Comparable<News> {
 	 */
 	@Override
 	public int compareTo(News o) {
-		int diff = pubDate.compareTo(o.pubDate);
+		int diff = o.pubDate.compareTo(pubDate);
 		if(diff != 0) return diff;
 		return getPage().compareTo(o.getPage());
 	}

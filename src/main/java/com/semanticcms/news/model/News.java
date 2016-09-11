@@ -35,7 +35,7 @@ public class News extends Element implements Comparable<News> {
 	private String view;
 	// The title of the news entry, will be the target page title/element label when not specified
 	private String title;
-	// The optional description of the news entry
+	// The optional short description of the news entry, this is text-only - no HTML, all HTML will be escaped.  For HTML use body.
 	private String description;
 	// TODO: comments once a comment system is enabled
 	// guid: generated from target

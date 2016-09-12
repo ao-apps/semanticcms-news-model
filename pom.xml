@@ -38,6 +38,7 @@ along with semanticcms-news-model.  If not, see <http://www.gnu.org/licenses />.
 	<name>SemanticCMS News Model</name>
 	<url>https://semanticcms.com/news/model/</url>
 	<description>SemanticCMS newsfeeds.</description>
+	<inceptionYear>2016</inceptionYear>
 
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-news-model.git</connection>

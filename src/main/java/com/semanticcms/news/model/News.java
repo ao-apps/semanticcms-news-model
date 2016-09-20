@@ -47,7 +47,7 @@ public class News extends Element implements Comparable<News> {
 	 */
 	@Override
 	public int compareTo(News o) {
-		int diff = o.pubDate.compareTo(pubDate);
+		int diff = o.getPubDate().compareTo(getPubDate());
 		if(diff != 0) return diff;
 		return getPage().compareTo(o.getPage());
 	}
@@ -60,7 +60,7 @@ public class News extends Element implements Comparable<News> {
 
 	@Override
 	public String getLabel() {
-		return title;
+		return getTitle();
 	}
 
 	/**
@@ -72,66 +72,94 @@ public class News extends Element implements Comparable<News> {
 	}
 
 	public String getBook() {
-		return book;
+		synchronized(lock) {
+			return book;
+		}
 	}
 
 	public void setBook(String book) {
-		checkNotFrozen();
-		this.book = book==null || book.isEmpty() ? null : book;
+		synchronized(lock) {
+			checkNotFrozen();
+			this.book = book==null || book.isEmpty() ? null : book;
+		}
 	}
 
 	public String getTargetPage() {
-		return targetPage;
+		synchronized(lock) {
+			return targetPage;
+		}
 	}
 
 	public void setTargetPage(String targetPage) {
-		checkNotFrozen();
-		this.targetPage = targetPage==null || targetPage.isEmpty() ? null : targetPage;
+		synchronized(lock) {
+			checkNotFrozen();
+			this.targetPage = targetPage==null || targetPage.isEmpty() ? null : targetPage;
+		}
 	}
 
 	public String getElement() {
-		return element;
+		synchronized(lock) {
+			return element;
+		}
 	}
 
 	public void setElement(String element) {
-		checkNotFrozen();
-		this.element = element==null || element.isEmpty() ? null : element;
+		synchronized(lock) {
+			checkNotFrozen();
+			this.element = element==null || element.isEmpty() ? null : element;
+		}
 	}
 
 	public String getView() {
-		return view;
+		synchronized(lock) {
+			return view;
+		}
 	}
 
 	public void setView(String view) {
-		checkNotFrozen();
-		this.view = view==null || view.isEmpty() ? null : view;
+		synchronized(lock) {
+			checkNotFrozen();
+			this.view = view==null || view.isEmpty() ? null : view;
+		}
 	}
 
 	public String getTitle() {
-		return title;
+		synchronized(lock) {
+			return title;
+		}
 	}
 
 	public void setTitle(String title) {
-		checkNotFrozen();
-		this.title = title==null || title.isEmpty() ? null : title;
+		synchronized(lock) {
+			checkNotFrozen();
+			this.title = title==null || title.isEmpty() ? null : title;
+		}
 	}
 
 	public String getDescription() {
-		return description;
+		synchronized(lock) {
+			return description;
+		}
 	}
 
 	public void setDescription(String description) {
-		checkNotFrozen();
-		this.description = description==null || description.isEmpty() ? null : description;
+		synchronized(lock) {
+			checkNotFrozen();
+			this.description = description==null || description.isEmpty() ? null : description;
+		}
 	}
 
 	public DateTime getPubDate() {
-		return pubDate;
+		synchronized(lock) {
+			return pubDate;
+		}
 	}
 
 	public void setPubDate(ReadableDateTime pubDate) {
-		checkNotFrozen();
-		this.pubDate = pubDate==null ? null : pubDate.toDateTime();
+		synchronized(lock) {
+			checkNotFrozen();
+			this.pubDate = pubDate==null ? null : pubDate.toDateTime();
+		}
 	}
 
 	@Override

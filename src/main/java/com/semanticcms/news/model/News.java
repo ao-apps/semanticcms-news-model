@@ -22,6 +22,7 @@
  */
 package com.semanticcms.news.model;
 
+import static com.aoindustries.util.StringUtility.nullIfEmpty;
 import com.semanticcms.core.model.Element;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableDateTime;
@@ -80,7 +81,7 @@ public class News extends Element implements Comparable<News> {
 	public void setBook(String book) {
 		synchronized(lock) {
 			checkNotFrozen();
-			this.book = book==null || book.isEmpty() ? null : book;
+			this.book = nullIfEmpty(book);
 		}
 	}
 
@@ -93,7 +94,7 @@ public class News extends Element implements Comparable<News> {
 	public void setTargetPage(String targetPage) {
 		synchronized(lock) {
 			checkNotFrozen();
-			this.targetPage = targetPage==null || targetPage.isEmpty() ? null : targetPage;
+			this.targetPage = nullIfEmpty(targetPage);
 		}
 	}
 
@@ -106,7 +107,7 @@ public class News extends Element implements Comparable<News> {
 	public void setElement(String element) {
 		synchronized(lock) {
 			checkNotFrozen();
-			this.element = element==null || element.isEmpty() ? null : element;
+			this.element = nullIfEmpty(element);
 		}
 	}
 
@@ -119,7 +120,7 @@ public class News extends Element implements Comparable<News> {
 	public void setView(String view) {
 		synchronized(lock) {
 			checkNotFrozen();
-			this.view = view==null || view.isEmpty() ? null : view;
+			this.view = nullIfEmpty(view);
 		}
 	}
 
@@ -132,7 +133,7 @@ public class News extends Element implements Comparable<News> {
 	public void setTitle(String title) {
 		synchronized(lock) {
 			checkNotFrozen();
-			this.title = title==null || title.isEmpty() ? null : title;
+			this.title = nullIfEmpty(title);
 		}
 	}
 
@@ -145,7 +146,7 @@ public class News extends Element implements Comparable<News> {
 	public void setDescription(String description) {
 		synchronized(lock) {
 			checkNotFrozen();
-			this.description = description==null || description.isEmpty() ? null : description;
+			this.description = nullIfEmpty(description);
 		}
 	}
 

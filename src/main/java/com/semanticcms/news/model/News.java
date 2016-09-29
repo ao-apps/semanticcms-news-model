@@ -30,18 +30,18 @@ import org.joda.time.ReadableDateTime;
 public class News extends Element implements Comparable<News> {
 
 	// Target of news entry, will be the parent page/element of the news entry when not specified
-	private String book;
-	private String targetPage;
-	private String element;
-	private String view;
+	private volatile String book;
+	private volatile String targetPage;
+	private volatile String element;
+	private volatile String view;
 	// The title of the news entry, will be the target page title/element label when not specified
-	private String title;
+	private volatile String title;
 	// The optional short description of the news entry, this is text-only - no HTML, all HTML will be escaped.  For HTML use body.
-	private String description;
+	private volatile String description;
 	// TODO: comments once a comment system is enabled
 	// guid: generated from target
 	// Java 1.8: No longer use joda time
-	private DateTime pubDate; // Required, maybe a future version could interact with versioning systems
+	private volatile DateTime pubDate; // Required, maybe a future version could interact with versioning systems
 
 	/**
 	 * Ordered by pubDate desc, page
@@ -51,12 +51,6 @@ public class News extends Element implements Comparable<News> {
 		int diff = o.getPubDate().compareTo(getPubDate());
 		if(diff != 0) return diff;
 		return getPage().compareTo(o.getPage());
-	}
-
-	@Override
-	public News freeze() {
-		super.freeze();
-		return this;
 	}
 
 	@Override
@@ -73,94 +67,66 @@ public class News extends Element implements Comparable<News> {
 	}
 
 	public String getBook() {
-		synchronized(lock) {
-			return book;
-		}
+		return book;
 	}
 
 	public void setBook(String book) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.book = nullIfEmpty(book);
-		}
+		checkNotFrozen();
+		this.book = nullIfEmpty(book);
 	}
 
 	public String getTargetPage() {
-		synchronized(lock) {
-			return targetPage;
-		}
+		return targetPage;
 	}
 
 	public void setTargetPage(String targetPage) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.targetPage = nullIfEmpty(targetPage);
-		}
+		checkNotFrozen();
+		this.targetPage = nullIfEmpty(targetPage);
 	}
 
 	public String getElement() {
-		synchronized(lock) {
-			return element;
-		}
+		return element;
 	}
 
 	public void setElement(String element) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.element = nullIfEmpty(element);
-		}
+		checkNotFrozen();
+		this.element = nullIfEmpty(element);
 	}
 
 	public String getView() {
-		synchronized(lock) {
-			return view;
-		}
+		return view;
 	}
 
 	public void setView(String view) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.view = nullIfEmpty(view);
-		}
+		checkNotFrozen();
+		this.view = nullIfEmpty(view);
 	}
 
 	public String getTitle() {
-		synchronized(lock) {
-			return title;
-		}
+		return title;
 	}
 
 	public void setTitle(String title) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.title = nullIfEmpty(title);
-		}
+		checkNotFrozen();
+		this.title = nullIfEmpty(title);
 	}
 
 	public String getDescription() {
-		synchronized(lock) {
-			return description;
-		}
+		return description;
 	}
 
 	public void setDescription(String description) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.description = nullIfEmpty(description);
-		}
+		checkNotFrozen();
+		this.description = nullIfEmpty(description);
 	}
 
 	public DateTime getPubDate() {
-		synchronized(lock) {
-			return pubDate;
-		}
+		return pubDate;
 	}
 
 	public void setPubDate(ReadableDateTime pubDate) {
-		synchronized(lock) {
-			checkNotFrozen();
-			this.pubDate = pubDate==null ? null : pubDate.toDateTime();
-		}
+		checkNotFrozen();
+		this.pubDate = pubDate==null ? null : pubDate.toDateTime();
 	}
 
 	@Override

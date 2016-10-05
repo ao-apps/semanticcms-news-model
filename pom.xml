@@ -59,6 +59,7 @@ along with semanticcms-news-model.  If not, see <http://www.gnu.org/licenses />.
 							<configuration>
 								<links>
 									<link>http://www.joda.org/joda-time/apidocs/</link>
+									<link>https://www.aoindustries.com/docs/aocode-public/</link>
 									<link>https://semanticcms.com/core/model/apidocs/</link>
 								</links>
 							</configuration>

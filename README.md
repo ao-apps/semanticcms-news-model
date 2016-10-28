@@ -1,5 +1,5 @@
 # [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://www.aoindustries.com/) [SemanticCMS](https://semanticcms.com/) / [News](https://semanticcms.com/news/) / [Model](https://semanticcms.com/news/model/)
-[SemanticCMS](https://semanticcms.com/) newsfeeds.
+[SemanticCMS newsfeeds](https://semanticcms.com/news/).
 
 ## Project Links
 * [Project Home](https://semanticcms.com/news/model/)

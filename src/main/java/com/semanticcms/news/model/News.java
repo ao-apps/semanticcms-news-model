@@ -1,6 +1,6 @@
 /*
  * semanticcms-news-model - SemanticCMS newsfeeds.
- * Copyright (C) 2016  AO Industries, Inc.
+ * Copyright (C) 2016, 2017  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -30,6 +30,7 @@ import org.joda.time.ReadableDateTime;
 public class News extends Element implements Comparable<News> {
 
 	// Target of news entry, will be the parent page/element of the news entry when not specified
+	private volatile String domain;
 	private volatile String book;
 	private volatile String targetPage;
 	private volatile String element;
@@ -64,6 +65,15 @@ public class News extends Element implements Comparable<News> {
 	@Override
 	public boolean isHidden() {
 		return true;
+	}
+
+	public String getDomain() {
+		return domain;
+	}
+
+	public void setDomain(String domain) {
+		checkNotFrozen();
+		this.domain = nullIfEmpty(domain);
 	}
 
 	public String getBook() {

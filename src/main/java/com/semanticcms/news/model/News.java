@@ -22,6 +22,7 @@
  */
 package com.semanticcms.news.model;
 
+import com.aoindustries.net.Path;
 import static com.aoindustries.util.StringUtility.nullIfEmpty;
 import com.semanticcms.core.model.Element;
 import org.joda.time.DateTime;
@@ -31,7 +32,7 @@ public class News extends Element implements Comparable<News> {
 
 	// Target of news entry, will be the parent page/element of the news entry when not specified
 	private volatile String domain;
-	private volatile String book;
+	private volatile Path book;
 	private volatile String targetPage;
 	private volatile String element;
 	private volatile String view;
@@ -76,13 +77,13 @@ public class News extends Element implements Comparable<News> {
 		this.domain = nullIfEmpty(domain);
 	}
 
-	public String getBook() {
+	public Path getBook() {
 		return book;
 	}
 
-	public void setBook(String book) {
+	public void setBook(Path book) {
 		checkNotFrozen();
-		this.book = nullIfEmpty(book);
+		this.book = book;
 	}
 
 	public String getTargetPage() {

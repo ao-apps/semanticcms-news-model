@@ -33,6 +33,7 @@ public class News extends Element implements Comparable<News> {
 	// Target of news entry, will be the parent page/element of the news entry when not specified
 	private volatile String domain;
 	private volatile Path book;
+	// TODO: Should this be Path, too?
 	private volatile String targetPage;
 	private volatile String element;
 	private volatile String view;

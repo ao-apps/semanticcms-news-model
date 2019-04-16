@@ -40,7 +40,7 @@ along with semanticcms-news-model.  If not, see <http://www.gnu.org/licenses />.
 		<description.html><![CDATA[<a target="_top" href="https://semanticcms.com/news/">SemanticCMS newsfeeds</a>.]]></description.html>
 	</properties>
 
-	<name>SemanticCMS 1 News Model</name>
+	<name>SemanticCMS News Model</name>
 	<url>https://semanticcms.com/news/model/</url>
 	<description>SemanticCMS newsfeeds.</description>
 	<inceptionYear>2016</inceptionYear>

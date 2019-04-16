@@ -37,7 +37,7 @@ along with semanticcms-news-model.  If not, see <http://www.gnu.org/licenses />.
 		<documented.groupId>com.semanticcms</documented.groupId><documented.artifactId>semanticcms-news-model</documented.artifactId>
 		<documented.javaVersion>1.7</documented.javaVersion>
 		<documented.javac.link.javaApi>${javac.link.javaApi.jdk7}</documented.javac.link.javaApi>
-		<documented.name>SemanticCMS 1 News Model</documented.name>
+		<documented.name>SemanticCMS News Model</documented.name>
 		<documented.shortTitle>Model</documented.shortTitle>
 		<documented.url>https://semanticcms.com/news/model/</documented.url>
 		<documented.description>SemanticCMS newsfeeds.</documented.description>

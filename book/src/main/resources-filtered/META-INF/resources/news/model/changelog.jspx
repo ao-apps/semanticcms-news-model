@@ -36,7 +36,7 @@ along with semanticcms-news-model.  If not, see <http://www.gnu.org/licenses />.
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-31T00:24:39-0500"
-		dateModified="2019-09-02T03:51:45-0500"
+		dateModified="2019-10-01T18:47:29-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-news-model:pom.version}" />
@@ -53,7 +53,7 @@ along with semanticcms-news-model.  If not, see <http://www.gnu.org/licenses />.
 				scmUrl="@{documented.scm.url}"
 			>
 				<ul>
-					<li>Updated for compatibility with <ao:a href="https://aoindustries.com/ao-lang/changelog#release-notes-3.0.1">ao-lang-3.0.1</ao:a>.</li>
+					<li>Updated for compatibility with <ao:a href="https://aoindustries.com/ao-lang/changelog#release-notes-3.1.0">ao-lang-3.1.0</ao:a>.</li>
 				</ul>
 			</changelog:release>
 		</c:if>

@@ -22,9 +22,9 @@
  */
 package com.semanticcms.news.model;
 
+import static com.aoindustries.lang.Strings.nullIfEmpty;
 import com.aoindustries.net.DomainName;
 import com.aoindustries.net.Path;
-import static com.aoindustries.lang.Strings.nullIfEmpty;
 import com.semanticcms.core.model.Element;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableDateTime;

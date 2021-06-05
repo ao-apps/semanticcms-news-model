@@ -1,6 +1,6 @@
 /*
  * semanticcms-news-model - SemanticCMS newsfeeds.
- * Copyright (C) 2016, 2017, 2020  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,9 +22,9 @@
  */
 package com.semanticcms.news.model;
 
-import static com.aoindustries.lang.Strings.nullIfEmpty;
-import com.aoindustries.net.DomainName;
-import com.aoindustries.net.Path;
+import static com.aoapps.lang.Strings.nullIfEmpty;
+import com.aoapps.net.DomainName;
+import com.aoapps.net.Path;
 import com.semanticcms.core.model.Element;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableDateTime;

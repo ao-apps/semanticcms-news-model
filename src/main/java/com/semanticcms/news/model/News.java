@@ -30,108 +30,110 @@ import org.joda.time.ReadableDateTime;
 
 public class News extends Element implements Comparable<News> {
 
-	// Target of news entry, will be the parent page/element of the news entry when not specified
-	private volatile String book;
-	private volatile String targetPage;
-	private volatile String element;
-	private volatile String view;
-	// The title of the news entry, will be the target page title/element label when not specified
-	private volatile String title;
-	// The optional short description of the news entry, this is text-only - no HTML, all HTML will be escaped.  For HTML use body.
-	private volatile String description;
-	// TODO: comments once a comment system is enabled
-	// guid: generated from target
-	// Java 1.8: No longer use joda time
-	private volatile DateTime pubDate; // Required, maybe a future version could interact with versioning systems
+  // Target of news entry, will be the parent page/element of the news entry when not specified
+  private volatile String book;
+  private volatile String targetPage;
+  private volatile String element;
+  private volatile String view;
+  // The title of the news entry, will be the target page title/element label when not specified
+  private volatile String title;
+  // The optional short description of the news entry, this is text-only - no HTML, all HTML will be escaped.  For HTML use body.
+  private volatile String description;
+  // TODO: comments once a comment system is enabled
+  // guid: generated from target
+  // Java 1.8: No longer use joda time
+  private volatile DateTime pubDate; // Required, maybe a future version could interact with versioning systems
 
-	/**
-	 * Ordered by pubDate desc, page
-	 */
-	@Override
-	public int compareTo(News o) {
-		int diff = o.getPubDate().compareTo(getPubDate());
-		if(diff != 0) return diff;
-		return getPage().compareTo(o.getPage());
-	}
+  /**
+   * Ordered by pubDate desc, page
+   */
+  @Override
+  public int compareTo(News o) {
+    int diff = o.getPubDate().compareTo(getPubDate());
+    if (diff != 0) {
+      return diff;
+    }
+    return getPage().compareTo(o.getPage());
+  }
 
-	@Override
-	public String getLabel() {
-		return getTitle();
-	}
+  @Override
+  public String getLabel() {
+    return getTitle();
+  }
 
-	/**
-	 * News elements are not part of the content directly, so are hidden from tree views.
-	 */
-	@Override
-	public boolean isHidden() {
-		return true;
-	}
+  /**
+   * News elements are not part of the content directly, so are hidden from tree views.
+   */
+  @Override
+  public boolean isHidden() {
+    return true;
+  }
 
-	public String getBook() {
-		return book;
-	}
+  public String getBook() {
+    return book;
+  }
 
-	public void setBook(String book) {
-		checkNotFrozen();
-		this.book = nullIfEmpty(book);
-	}
+  public void setBook(String book) {
+    checkNotFrozen();
+    this.book = nullIfEmpty(book);
+  }
 
-	public String getTargetPage() {
-		return targetPage;
-	}
+  public String getTargetPage() {
+    return targetPage;
+  }
 
-	public void setTargetPage(String targetPage) {
-		checkNotFrozen();
-		this.targetPage = nullIfEmpty(targetPage);
-	}
+  public void setTargetPage(String targetPage) {
+    checkNotFrozen();
+    this.targetPage = nullIfEmpty(targetPage);
+  }
 
-	public String getElement() {
-		return element;
-	}
+  public String getElement() {
+    return element;
+  }
 
-	public void setElement(String element) {
-		checkNotFrozen();
-		this.element = nullIfEmpty(element);
-	}
+  public void setElement(String element) {
+    checkNotFrozen();
+    this.element = nullIfEmpty(element);
+  }
 
-	public String getView() {
-		return view;
-	}
+  public String getView() {
+    return view;
+  }
 
-	public void setView(String view) {
-		checkNotFrozen();
-		this.view = nullIfEmpty(view);
-	}
+  public void setView(String view) {
+    checkNotFrozen();
+    this.view = nullIfEmpty(view);
+  }
 
-	public String getTitle() {
-		return title;
-	}
+  public String getTitle() {
+    return title;
+  }
 
-	public void setTitle(String title) {
-		checkNotFrozen();
-		this.title = nullIfEmpty(title);
-	}
+  public void setTitle(String title) {
+    checkNotFrozen();
+    this.title = nullIfEmpty(title);
+  }
 
-	public String getDescription() {
-		return description;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public void setDescription(String description) {
-		checkNotFrozen();
-		this.description = nullIfEmpty(description);
-	}
+  public void setDescription(String description) {
+    checkNotFrozen();
+    this.description = nullIfEmpty(description);
+  }
 
-	public DateTime getPubDate() {
-		return pubDate;
-	}
+  public DateTime getPubDate() {
+    return pubDate;
+  }
 
-	public void setPubDate(ReadableDateTime pubDate) {
-		checkNotFrozen();
-		this.pubDate = pubDate==null ? null : pubDate.toDateTime();
-	}
+  public void setPubDate(ReadableDateTime pubDate) {
+    checkNotFrozen();
+    this.pubDate = pubDate == null ? null : pubDate.toDateTime();
+  }
 
-	@Override
-	protected String getDefaultIdPrefix() {
-		return "news";
-	}
+  @Override
+  protected String getDefaultIdPrefix() {
+    return "news";
+  }
 }

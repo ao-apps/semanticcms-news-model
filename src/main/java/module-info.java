@@ -1,6 +1,6 @@
 /*
  * semanticcms-news-model - SemanticCMS newsfeeds.
- * Copyright (C) 2021  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -21,9 +21,9 @@
  * along with semanticcms-news-model.  If not, see <https://www.gnu.org/licenses/>.
  */
 module com.semanticcms.news.model {
-	exports com.semanticcms.news.model;
-	// Direct
-	requires com.aoapps.lang; // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
-	requires org.joda.time; // <groupId>joda-time</groupId><artifactId>joda-time</artifactId>
-	requires com.semanticcms.core.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
+  exports com.semanticcms.news.model;
+  // Direct
+  requires com.aoapps.lang; // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
+  requires org.joda.time; // <groupId>joda-time</groupId><artifactId>joda-time</artifactId>
+  requires com.semanticcms.core.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
 }

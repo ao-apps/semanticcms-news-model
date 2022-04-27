@@ -27,4 +27,4 @@ module com.semanticcms.news.model {
   requires com.aoapps.net.types; // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>
   requires org.joda.time; // <groupId>joda-time</groupId><artifactId>joda-time</artifactId>
   requires com.semanticcms.core.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
-}
+} // TODO: Avoiding rewrite-maven-plugin-4.22.2 truncation

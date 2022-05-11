@@ -24,10 +24,14 @@
 package com.semanticcms.news.model;
 
 import static com.aoapps.lang.Strings.nullIfEmpty;
+
 import com.semanticcms.core.model.Element;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableDateTime;
 
+/**
+ * Models one news entry.
+ */
 public class News extends Element implements Comparable<News> {
 
   // Target of news entry, will be the parent page/element of the news entry when not specified
@@ -45,7 +49,7 @@ public class News extends Element implements Comparable<News> {
   private volatile DateTime pubDate; // Required, maybe a future version could interact with versioning systems
 
   /**
-   * Ordered by pubDate desc, page
+   * Ordered by pubDate desc, page.
    */
   @Override
   public int compareTo(News o) {

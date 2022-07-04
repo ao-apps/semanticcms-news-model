@@ -46,7 +46,7 @@ along with semanticcms-news-model.  If not, see <https://www.gnu.org/licenses/>.
     <sonar.coverage.exclusions>**.*</sonar.coverage.exclusions>
   </properties>
 
-  <name>SemanticCMS News Model²</name>
+  <name>SemanticCMS News Model</name>
   <url>https://semanticcms.com/news/model/</url>
   <description>SemanticCMS newsfeeds.</description>
   <inceptionYear>2016</inceptionYear>

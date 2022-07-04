@@ -36,15 +36,15 @@ along with semanticcms-news-model.  If not, see <https://www.gnu.org/licenses/>.
     <module.name>com.semanticcms.news.model.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>semanticcms-news-model</documented.artifactId>
-    <documented.name>SemanticCMS News Model²</documented.name>
+    <documented.name>SemanticCMS News Model</documented.name>
     <documented.description>SemanticCMS newsfeeds.</documented.description>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
 
-  <name>SemanticCMS News Model² Book</name>
+  <name>SemanticCMS News Model Book</name>
   <url>https://semanticcms.com/news/model/</url>
-  <description>Documentation for SemanticCMS News Model² in SemanticCMS format.</description>
+  <description>Documentation for SemanticCMS News Model in SemanticCMS format.</description>
   <inceptionYear>2016</inceptionYear>
 
   <licenses>

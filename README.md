@@ -22,7 +22,7 @@
 * [Project Home](https://semanticcms.com/news/model/)
 * [Changelog](https://semanticcms.com/news/model/changelog)
 * [API Docs](https://semanticcms.com/news/model/apidocs/)
-* [Maven Central Repository](https://search.maven.org/artifact/com.semanticcms/semanticcms-news-model)
+* [Maven Central Repository](https://central.sonatype.com/search?namespace=com.semanticcms&q=a%3Asemanticcms-news-model)
 * [GitHub](https://github.com/ao-apps/semanticcms-news-model)
 
 ## Contact Us

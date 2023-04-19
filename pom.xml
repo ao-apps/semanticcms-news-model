@@ -186,7 +186,7 @@ along with semanticcms-news-model.  If not, see <https://www.gnu.org/licenses/>.
         <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId><version>5.3.0${POST-SNAPSHOT}</version>
       </dependency>
       <dependency>
-        <groupId>joda-time</groupId><artifactId>joda-time</artifactId><version>2.12.2</version>
+        <groupId>joda-time</groupId><artifactId>joda-time</artifactId><version>2.12.5</version>
       </dependency>
       <dependency>
         <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId><version>1.14.1${POST-SNAPSHOT}</version>

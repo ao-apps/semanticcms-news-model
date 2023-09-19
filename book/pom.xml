@@ -41,6 +41,9 @@ along with semanticcms-news-model.  If not, see <https://www.gnu.org/licenses/>.
     <documented.artifactId>semanticcms-news-model</documented.artifactId>
     <documented.name>SemanticCMS News Model</documented.name>
     <documented.description>SemanticCMS newsfeeds.</documented.description>
+    <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
+/ <a target="${javadoc.target}" href="https://semanticcms.com/news/">News</a>
+/ <a target="${javadoc.target}" href="${project.url}">Model</a>]]></javadoc.breadcrumbs>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
     <!-- SonarQube -->

@@ -1,6 +1,6 @@
 /*
  * semanticcms-news-model - SemanticCMS newsfeeds.
- * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2023  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2023, 2024  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -82,6 +82,9 @@ public class News extends Element implements Comparable<News> {
     return domain;
   }
 
+  /**
+   * Sets the domain while making sure not frozen.
+   */
   public void setDomain(DomainName domain) {
     checkNotFrozen();
     this.domain = domain;
@@ -91,6 +94,9 @@ public class News extends Element implements Comparable<News> {
     return book;
   }
 
+  /**
+   * Sets the book while making sure not frozen.
+   */
   public void setBook(Path book) {
     checkNotFrozen();
     this.book = book;
@@ -100,6 +106,9 @@ public class News extends Element implements Comparable<News> {
     return targetPage;
   }
 
+  /**
+   * Sets the target page while making sure not frozen.
+   */
   public void setTargetPage(String targetPage) {
     checkNotFrozen();
     this.targetPage = nullIfEmpty(targetPage);
@@ -109,6 +118,9 @@ public class News extends Element implements Comparable<News> {
     return element;
   }
 
+  /**
+   * Sets the element while making sure not frozen.
+   */
   public void setElement(String element) {
     checkNotFrozen();
     this.element = nullIfEmpty(element);
@@ -118,6 +130,9 @@ public class News extends Element implements Comparable<News> {
     return view;
   }
 
+  /**
+   * Sets the view while making sure not frozen.
+   */
   public void setView(String view) {
     checkNotFrozen();
     this.view = nullIfEmpty(view);
@@ -127,6 +142,9 @@ public class News extends Element implements Comparable<News> {
     return title;
   }
 
+  /**
+   * Sets the title while making sure not frozen.
+   */
   public void setTitle(String title) {
     checkNotFrozen();
     this.title = nullIfEmpty(title);
@@ -136,6 +154,9 @@ public class News extends Element implements Comparable<News> {
     return description;
   }
 
+  /**
+   * Sets the description while making sure not frozen.
+   */
   public void setDescription(String description) {
     checkNotFrozen();
     this.description = nullIfEmpty(description);
@@ -145,6 +166,9 @@ public class News extends Element implements Comparable<News> {
     return pubDate;
   }
 
+  /**
+   * Sets the published date while making sure not frozen.
+   */
   public void setPubDate(ReadableDateTime pubDate) {
     checkNotFrozen();
     this.pubDate = pubDate == null ? null : pubDate.toDateTime();
@@ -162,6 +186,9 @@ public class News extends Element implements Comparable<News> {
     return allowRobots;
   }
 
+  /**
+   * Sets allow robots while making sure not frozen.
+   */
   public void setAllowRobots(Boolean allowRobots) {
     checkNotFrozen();
     this.allowRobots = allowRobots;

@@ -1,6 +1,6 @@
 /*
  * semanticcms-news-model - SemanticCMS newsfeeds.
- * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2023, 2024  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2023, 2024, 2025  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -28,8 +28,7 @@ import static com.aoapps.lang.Strings.nullIfEmpty;
 import com.aoapps.net.DomainName;
 import com.aoapps.net.Path;
 import com.semanticcms.core.model.Element;
-import org.joda.time.DateTime;
-import org.joda.time.ReadableDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Models one news entry.
@@ -49,8 +48,7 @@ public class News extends Element implements Comparable<News> {
   private volatile String description;
   // TODO: comments once a comment system is enabled
   // guid: generated from target
-  // Java 1.8: No longer use joda time
-  private volatile DateTime pubDate; // Required, maybe a future version could interact with versioning systems
+  private volatile ZonedDateTime pubDate; // Required, maybe a future version could interact with versioning systems
   private volatile Boolean allowRobots;
 
   /**
@@ -162,16 +160,16 @@ public class News extends Element implements Comparable<News> {
     this.description = nullIfEmpty(description);
   }
 
-  public DateTime getPubDate() {
+  public ZonedDateTime getPubDate() {
     return pubDate;
   }
 
   /**
    * Sets the published date while making sure not frozen.
    */
-  public void setPubDate(ReadableDateTime pubDate) {
+  public void setPubDate(ZonedDateTime pubDate) {
     checkNotFrozen();
-    this.pubDate = pubDate == null ? null : pubDate.toDateTime();
+    this.pubDate = pubDate;
   }
 
   /**

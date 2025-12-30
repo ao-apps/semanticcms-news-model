@@ -30,7 +30,6 @@ def upstreamProjects = [
   // Direct
   '../../oss/lang', // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
   '../../oss/net-types', // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>
-  // No Jenkins: <groupId>joda-time</groupId><artifactId>joda-time</artifactId>
   '../core/model', // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
 ]
 

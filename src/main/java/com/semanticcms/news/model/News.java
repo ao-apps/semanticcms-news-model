@@ -1,6 +1,6 @@
 /*
  * semanticcms-news-model - SemanticCMS newsfeeds.
- * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2023, 2024, 2025  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2023, 2024, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -159,9 +159,9 @@ public class News extends Element implements Comparable<News> {
   /**
    * Gets the allowRobots setting.
    * <ul>
-   *   <li>{@literal null} (The default) - Inherit setting from page</li>
-   *   <li>{@literal true} - Robots allowed</li>
-   *   <li>{@literal false} - Robots not allowed</li>
+   *   <li>{@code null} (The default) - Inherit setting from page</li>
+   *   <li>{@code true} - Robots allowed</li>
+   *   <li>{@code false} - Robots not allowed</li>
    * </ul>
    */
   public Boolean getAllowRobots() {
